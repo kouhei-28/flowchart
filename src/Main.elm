@@ -22,7 +22,7 @@ type alias Node =
 
 type alias Connector =
     { node : Node
-    , leftAndRight : LestAndRight
+    , leftAndRight : LeftAndRight
     }
 
 
@@ -35,7 +35,7 @@ type alias Edge =
     }
 
 
-type LestAndRight
+type LeftAndRight
     = Left
     | Right
 
@@ -99,7 +99,7 @@ updateConnectingEdge edgeId position toConnector edge =
         edge
 
 
-calculateConnectorPosition : Position -> LestAndRight -> Position
+calculateConnectorPosition : Position -> LeftAndRight -> Position
 calculateConnectorPosition nodePosition leftAndRight =
     case leftAndRight of
         Left ->
